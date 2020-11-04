@@ -133,4 +133,3 @@ Notes:
 - FreeRTOS tick handler (and system service entry etc.) is installed by macro-overriding in FreeRTOSConfig.h (#define xPortSysTickHandler SysTick_Handler) by default, of course this can be extended via custom ISR
 - Be careful about proper clock init sequence. Setting clock source doesn't mean it's set at the next instruction; typically one has to wait for clock source status; otherwise you end up with system that will not boot predictably
 - Don't forget to enable clock for peripherals
-# stm32f0-freertos-template
