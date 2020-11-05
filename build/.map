@@ -30,6 +30,7 @@ Archive member included to satisfy reference by file (symbol)
 Allocating common symbols
 Common symbol       size              file
 
+SystemCoreClock     0x4               build/src/main.o
 gpio_port_c         0x2c              build/src/main.o
 xQueueRegistry      0x40              build/external/FreeRTOS/queue.o
 
@@ -369,9 +370,6 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 build/src/main.o
  .text.usart1_init
                 0x0000000000000000        0x4 build/src/main.o
- .text.test_task2
-                0x0000000000000000       0x2c build/src/main.o
- COMMON         0x0000000000000000       0x2c build/src/main.o
  .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
  .text          0x0000000000000000      0x1d4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_divsi3.o)
@@ -454,7 +452,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
                 0x0000000008000000                g_pfnVectors
                 0x00000000080000c0                . = ALIGN (0x4)
 
-.text           0x00000000080000c0      0xed8
+.text           0x00000000080000c0      0xf4c
                 0x00000000080000c0                . = ALIGN (0x4)
  *(.text)
  .text          0x00000000080000c0       0x98 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
@@ -601,180 +599,188 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
  .text.test_task
                 0x0000000008000d98       0x2c build/src/main.o
                 0x0000000008000d98                test_task
+ .text.test_task2
+                0x0000000008000dc4       0x2c build/src/main.o
+                0x0000000008000dc4                test_task2
  .text.SystemInit
-                0x0000000008000dc4        0x4 build/src/main.o
-                0x0000000008000dc4                SystemInit
+                0x0000000008000df0        0x4 build/src/main.o
+                0x0000000008000df0                SystemInit
  .text.rcc_init
-                0x0000000008000dc8       0xd4 build/src/main.o
-                0x0000000008000dc8                rcc_init
+                0x0000000008000df4       0xf8 build/src/main.o
+                0x0000000008000df4                rcc_init
  .text.gpio_init
-                0x0000000008000e9c       0x4c build/src/main.o
-                0x0000000008000e9c                gpio_init
+                0x0000000008000eec       0x4c build/src/main.o
+                0x0000000008000eec                gpio_init
  .text.startup.main
-                0x0000000008000ee8       0x80 build/src/main.o
-                0x0000000008000ee8                main
+                0x0000000008000f38       0xa4 build/src/main.o
+                0x0000000008000f38                main
  .text.vApplicationGetIdleTaskMemory
-                0x0000000008000f68       0x18 build/src/main.o
-                0x0000000008000f68                vApplicationGetIdleTaskMemory
+                0x0000000008000fdc       0x18 build/src/main.o
+                0x0000000008000fdc                vApplicationGetIdleTaskMemory
  *(.glue_7)
- .glue_7        0x0000000008000f80        0x0 linker stubs
+ .glue_7        0x0000000008000ff4        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000000008000f80        0x0 linker stubs
+ .glue_7t       0x0000000008000ff4        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0000000008000f80        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+ .eh_frame      0x0000000008000ff4        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
  *(.init)
- .init          0x0000000008000f80        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crti.o
-                0x0000000008000f80                _init
- .init          0x0000000008000f84        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
+ .init          0x0000000008000ff4        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crti.o
+                0x0000000008000ff4                _init
+ .init          0x0000000008000ff8        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
  *(.fini)
- .fini          0x0000000008000f8c        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crti.o
-                0x0000000008000f8c                _fini
- .fini          0x0000000008000f90        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
-                0x0000000008000f98                . = ALIGN (0x4)
-                0x0000000008000f98                _etext = .
+ .fini          0x0000000008001000        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crti.o
+                0x0000000008001000                _fini
+ .fini          0x0000000008001004        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
+                0x000000000800100c                . = ALIGN (0x4)
+                0x000000000800100c                _etext = .
 
-.vfp11_veneer   0x0000000008000f98        0x0
- .vfp11_veneer  0x0000000008000f98        0x0 linker stubs
+.vfp11_veneer   0x000000000800100c        0x0
+ .vfp11_veneer  0x000000000800100c        0x0 linker stubs
 
-.v4_bx          0x0000000008000f98        0x0
- .v4_bx         0x0000000008000f98        0x0 linker stubs
+.v4_bx          0x000000000800100c        0x0
+ .v4_bx         0x000000000800100c        0x0 linker stubs
 
-.iplt           0x0000000008000f98        0x0
- .iplt          0x0000000008000f98        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x000000000800100c        0x0
+ .iplt          0x000000000800100c        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x0000000008000f98        0xc
-                0x0000000008000f98                . = ALIGN (0x4)
+.rodata         0x000000000800100c       0x14
+                0x000000000800100c                . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
  .rodata.vTaskStartScheduler.str1.4
-                0x0000000008000f98        0x5 build/external/FreeRTOS/tasks.o
- *fill*         0x0000000008000f9d        0x3 
+                0x000000000800100c        0x5 build/external/FreeRTOS/tasks.o
+ *fill*         0x0000000008001011        0x3 
  .rodata.main.str1.4
-                0x0000000008000fa0        0x4 build/src/main.o
-                0x0000000008000fa4                . = ALIGN (0x4)
+                0x0000000008001014        0x9 build/src/main.o
+                0x0000000008001020                . = ALIGN (0x4)
+ *fill*         0x000000000800101d        0x3 
 
-.rel.dyn        0x0000000008000fa4        0x0
- .rel.iplt      0x0000000008000fa4        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x0000000008001020        0x0
+ .rel.iplt      0x0000000008001020        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x0000000008000fa4        0x0
-                0x0000000008000fa4                __exidx_start = .
+.ARM            0x0000000008001020        0x0
+                0x0000000008001020                __exidx_start = .
  *(.ARM.exidx*)
-                0x0000000008000fa4                __exidx_end = .
+                0x0000000008001020                __exidx_end = .
 
-.preinit_array  0x0000000008000fa4        0x0
-                0x0000000008000fa4                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0000000008001020        0x0
+                0x0000000008001020                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x0000000008000fa4                PROVIDE (__preinit_array_end = .)
+                0x0000000008001020                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x0000000008000fa4        0x4
-                0x0000000008000fa4                PROVIDE (__init_array_start = .)
+.init_array     0x0000000008001020        0x4
+                0x0000000008001020                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x0000000008000fa4        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x0000000008000fa8                PROVIDE (__init_array_end = .)
+ .init_array    0x0000000008001020        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000008001024                PROVIDE (__init_array_end = .)
 
-.fini_array     0x0000000008000fa8        0x4
-                0x0000000008000fa8                PROVIDE (__fini_array_start = .)
+.fini_array     0x0000000008001024        0x4
+                0x0000000008001024                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0000000008000fa8        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x0000000008000fac                PROVIDE (__fini_array_end = .)
-                0x0000000008000fac                _sidata = LOADADDR (.data)
+ .fini_array    0x0000000008001024        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000008001028                PROVIDE (__fini_array_end = .)
+                0x0000000008001028                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000        0x8 load address 0x0000000008000fac
+.data           0x0000000020000000        0x4 load address 0x0000000008001028
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
  *(.data*)
  .data.uxCriticalNesting
                 0x0000000020000000        0x4 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
- .data.SystemCoreClock
-                0x0000000020000004        0x4 build/src/main.o
-                0x0000000020000004                SystemCoreClock
-                0x0000000020000008                . = ALIGN (0x4)
-                0x0000000020000008                _edata = .
+                0x0000000020000004                . = ALIGN (0x4)
+                0x0000000020000004                _edata = .
 
 .tm_clone_table
-                0x0000000020000008        0x0 load address 0x0000000008000fb4
+                0x0000000020000004        0x0 load address 0x000000000800102c
  .tm_clone_table
-                0x0000000020000008        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000020000004        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
  .tm_clone_table
-                0x0000000020000008        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtend.o
+                0x0000000020000004        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtend.o
 
-.igot.plt       0x0000000020000008        0x0 load address 0x0000000008000fb4
- .igot.plt      0x0000000020000008        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x0000000020000008                . = ALIGN (0x4)
+.igot.plt       0x0000000020000004        0x0 load address 0x000000000800102c
+ .igot.plt      0x0000000020000004        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000020000004                . = ALIGN (0x4)
 
-.bss            0x0000000020000008      0x774 load address 0x0000000008000fb4
-                0x0000000020000008                _sbss = .
-                0x0000000020000008                __bss_start__ = _sbss
+.bss            0x0000000020000004      0xa00 load address 0x000000000800102c
+                0x0000000020000004                _sbss = .
+                0x0000000020000004                __bss_start__ = _sbss
  *(.bss)
- .bss           0x0000000020000008       0x1c /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+ .bss           0x0000000020000004       0x1c /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
  *(.bss*)
  .bss.pxCurrentTCB
-                0x0000000020000024        0x4 build/external/FreeRTOS/tasks.o
-                0x0000000020000024                pxCurrentTCB
+                0x0000000020000020        0x4 build/external/FreeRTOS/tasks.o
+                0x0000000020000020                pxCurrentTCB
  .bss.pxDelayedTaskList
-                0x0000000020000028        0x4 build/external/FreeRTOS/tasks.o
+                0x0000000020000024        0x4 build/external/FreeRTOS/tasks.o
  .bss.pxOverflowDelayedTaskList
-                0x000000002000002c        0x4 build/external/FreeRTOS/tasks.o
+                0x0000000020000028        0x4 build/external/FreeRTOS/tasks.o
  .bss.pxReadyTasksLists
-                0x0000000020000030      0x460 build/external/FreeRTOS/tasks.o
+                0x000000002000002c      0x460 build/external/FreeRTOS/tasks.o
  .bss.uxCurrentNumberOfTasks
-                0x0000000020000490        0x4 build/external/FreeRTOS/tasks.o
+                0x000000002000048c        0x4 build/external/FreeRTOS/tasks.o
  .bss.uxDeletedTasksWaitingCleanUp
-                0x0000000020000494        0x4 build/external/FreeRTOS/tasks.o
+                0x0000000020000490        0x4 build/external/FreeRTOS/tasks.o
  .bss.uxSchedulerSuspended
-                0x0000000020000498        0x4 build/external/FreeRTOS/tasks.o
+                0x0000000020000494        0x4 build/external/FreeRTOS/tasks.o
  .bss.uxTaskNumber
-                0x000000002000049c        0x4 build/external/FreeRTOS/tasks.o
+                0x0000000020000498        0x4 build/external/FreeRTOS/tasks.o
  .bss.uxTopReadyPriority
-                0x00000000200004a0        0x4 build/external/FreeRTOS/tasks.o
+                0x000000002000049c        0x4 build/external/FreeRTOS/tasks.o
  .bss.xDelayedTaskList1
-                0x00000000200004a4       0x14 build/external/FreeRTOS/tasks.o
+                0x00000000200004a0       0x14 build/external/FreeRTOS/tasks.o
  .bss.xDelayedTaskList2
-                0x00000000200004b8       0x14 build/external/FreeRTOS/tasks.o
+                0x00000000200004b4       0x14 build/external/FreeRTOS/tasks.o
  .bss.xNextTaskUnblockTime
-                0x00000000200004cc        0x4 build/external/FreeRTOS/tasks.o
+                0x00000000200004c8        0x4 build/external/FreeRTOS/tasks.o
  .bss.xNumOfOverflows
-                0x00000000200004d0        0x4 build/external/FreeRTOS/tasks.o
+                0x00000000200004cc        0x4 build/external/FreeRTOS/tasks.o
  .bss.xPendedTicks
-                0x00000000200004d4        0x4 build/external/FreeRTOS/tasks.o
+                0x00000000200004d0        0x4 build/external/FreeRTOS/tasks.o
  .bss.xPendingReadyList
-                0x00000000200004d8       0x14 build/external/FreeRTOS/tasks.o
+                0x00000000200004d4       0x14 build/external/FreeRTOS/tasks.o
  .bss.xSchedulerRunning
-                0x00000000200004ec        0x4 build/external/FreeRTOS/tasks.o
+                0x00000000200004e8        0x4 build/external/FreeRTOS/tasks.o
  .bss.xSuspendedTaskList
-                0x00000000200004f0       0x14 build/external/FreeRTOS/tasks.o
+                0x00000000200004ec       0x14 build/external/FreeRTOS/tasks.o
  .bss.xTasksWaitingTermination
-                0x0000000020000504       0x14 build/external/FreeRTOS/tasks.o
+                0x0000000020000500       0x14 build/external/FreeRTOS/tasks.o
  .bss.xTickCount
-                0x0000000020000518        0x4 build/external/FreeRTOS/tasks.o
+                0x0000000020000514        0x4 build/external/FreeRTOS/tasks.o
  .bss.xYieldPending
-                0x000000002000051c        0x4 build/external/FreeRTOS/tasks.o
- .bss.uxIdleTaskStack.5663
-                0x0000000020000520      0x200 build/src/main.o
- .bss.xIdleTaskTCB.5662
-                0x0000000020000720       0x5c build/src/main.o
+                0x0000000020000518        0x4 build/external/FreeRTOS/tasks.o
+ .bss.test_task2_buffer.5744
+                0x000000002000051c       0x5c build/src/main.o
+ .bss.test_task2_stack.5743
+                0x0000000020000578      0x200 build/src/main.o
+ .bss.uxIdleTaskStack.5757
+                0x0000000020000778      0x200 build/src/main.o
+ .bss.xIdleTaskTCB.5756
+                0x0000000020000978       0x5c build/src/main.o
  *(COMMON)
-                0x000000002000077c                . = ALIGN (0x4)
-                0x000000002000077c                _ebss = .
-                0x000000002000077c                __bss_end__ = _ebss
+ COMMON         0x00000000200009d4       0x30 build/src/main.o
+                0x00000000200009d4                SystemCoreClock
+                0x00000000200009d8                gpio_port_c
+                0x0000000020000a04                . = ALIGN (0x4)
+                0x0000000020000a04                _ebss = .
+                0x0000000020000a04                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x000000002000077c      0x604 load address 0x0000000008000fb4
-                0x0000000020000780                . = ALIGN (0x8)
- *fill*         0x000000002000077c        0x4 
+                0x0000000020000a04      0x604 load address 0x000000000800102c
+                0x0000000020000a08                . = ALIGN (0x8)
+ *fill*         0x0000000020000a04        0x4 
                 [!provide]                        PROVIDE (end = .)
                 [!provide]                        PROVIDE (_end = .)
-                0x0000000020000980                . = (. + _Min_Heap_Size)
- *fill*         0x0000000020000780      0x200 
-                0x0000000020000d80                . = (. + _Min_Stack_Size)
- *fill*         0x0000000020000980      0x400 
-                0x0000000020000d80                . = ALIGN (0x8)
+                0x0000000020000c08                . = (. + _Min_Heap_Size)
+ *fill*         0x0000000020000a08      0x200 
+                0x0000000020001008                . = (. + _Min_Stack_Size)
+ *fill*         0x0000000020000c08      0x400 
+                0x0000000020001008                . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)

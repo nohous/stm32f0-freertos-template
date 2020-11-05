@@ -2,6 +2,7 @@
 #include "stm32f0xx_ll_bus.h"
 #include "stm32f0xx_ll_rcc.h"
 #include "stm32f0xx_ll_gpio.h"
+#include "stm32f0xx_ll_system.h"
 #include "FreeRTOS.h"
 #include "task.h"
 
@@ -9,6 +10,8 @@ void SystemInit(void)
 { 
 
 }
+
+uint32_t SystemCoreClock;
 
 void rcc_init(void) 
 {
@@ -23,8 +26,11 @@ void rcc_init(void)
 	LL_RCC_SetAPB1Prescaler(LL_RCC_APB1_DIV_1);
 	LL_RCC_SetUSARTClockSource(LL_RCC_USART1_CLKSOURCE_PCLK1 | LL_RCC_USART2_CLKSOURCE_PCLK1);
 
+	LL_RCC_HSE_EnableBypass();
 	LL_RCC_HSE_Enable();
 	while (!LL_RCC_HSE_IsReady());
+
+	LL_FLASH_SetLatency(LL_FLASH_LATENCY_1);
 
 	LL_RCC_PLL_Disable();
 	while (LL_RCC_PLL_IsReady());
@@ -39,6 +45,8 @@ void rcc_init(void)
 
 	LL_RCC_HSI_Disable();
 	while (LL_RCC_HSI_IsReady());
+
+	SystemCoreClock = 48000000;
 }
 
 void usart1_init()
@@ -115,7 +123,7 @@ int main(void)
 
 //	vTaskResume(test_task_handle);
 #endif
-#if 0
+#if 1
 	static StackType_t test_task2_stack[128];
 	static StaticTask_t test_task2_buffer;
 	static xTaskHandle test_task2_handle;
@@ -141,8 +149,6 @@ int main(void)
 		//LL_GPIO_TogglePin(GPIOC, LED_STATUS_R);
 	}
 }
-
-uint32_t SystemCoreClock = 48000000;
 
 void vApplicationGetIdleTaskMemory( StaticTask_t **ppxIdleTaskTCBBuffer,
                                     StackType_t **ppxIdleTaskStackBuffer,
