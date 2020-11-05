@@ -64,59 +64,67 @@ void gpio_init(void)
 
 	LL_GPIO_Init(GPIOC, &init);
 	LL_GPIO_ResetOutputPin(GPIOC, LED_STATUS_B | LED_STATUS_G | LED_STATUS_R);
-	LL_GPIO_SetOutputPin(GPIOC, LED_STATUS_G);
+	LL_GPIO_SetOutputPin(GPIOC, 0);
 }
 
 void test_task(void* arg)
 {
 	for ( ; ; ) {
-		LL_GPIO_SetOutputPin(GPIOC, LED_STATUS_R);
+		taskENTER_CRITICAL();
+		LL_GPIO_TogglePin(GPIOC, LED_STATUS_R);
+		taskEXIT_CRITICAL();
 		vTaskDelay(500 / portTICK_PERIOD_MS);
 	}
 }
 
-#if 0
+#if 1
 void test_task2(void* arg)
 {
 	for ( ; ; ) {
+		taskENTER_CRITICAL();
 		LL_GPIO_TogglePin(GPIOC, LED_STATUS_G);
-		vTaskDelay(1000 / portTICK_PERIOD_MS);
+		taskEXIT_CRITICAL();
+		vTaskDelay(333 / portTICK_PERIOD_MS);
+	
 	}
 }
 #endif
+
+#define ARRAY_SIZE(a) (sizeof(a) / sizeof(*(a)))
 
 int main(void) 
 {
 	rcc_init();
 	gpio_init();
 	/* SysTick clock is HCLK = 48M, to get 1000 Hz, we divide by 6000 */
-	//SysTick_Config(6000*8);
+	SysTick_Config(6000*8);
 
 #if 1
-	static StackType_t test_task_stack[128];
-	static StaticTask_t test_task_buffer;
-	static xTaskHandle test_task_handle;
+	StackType_t test_task_stack[128];
+	StaticTask_t test_task_buffer;
+	xTaskHandle test_task_handle;
 	test_task_handle = xTaskCreateStatic(
 		test_task, 
-		"test_task", 
-		sizeof(test_task_stack), 
+		"ble", 
+		ARRAY_SIZE(test_task_stack), 
 		NULL, 
 		2, 
 		test_task_stack, 
 		&test_task_buffer
 	); 
+
 //	vTaskResume(test_task_handle);
 #endif
 #if 0
-	StackType_t test_task2_stack[256];
-	StaticTask_t test_task2_buffer;
-	xTaskHandle test_task2_handle;
+	static StackType_t test_task2_stack[128];
+	static StaticTask_t test_task2_buffer;
+	static xTaskHandle test_task2_handle;
 	test_task2_handle = xTaskCreateStatic(
 		test_task2, 
-		"test_task", 
-		sizeof(test_task2_stack), 
+		"iouk", 
+		ARRAY_SIZE(test_task2_stack), 
 		NULL, 
-		tskIDLE_PRIORITY, 
+		2, 
 		test_task2_stack, 
 		&test_task2_buffer
 	); 

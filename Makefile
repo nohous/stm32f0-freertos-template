@@ -7,7 +7,7 @@ TARGET=template
 CPU=-mcpu=cortex-m0
 LDSCRIPT=STM32F071VBTx_FLASH.ld
 MCU = $(CPU) -mthumb $(FPU) $(FLOAT-ABI)
-OPT=-Os
+OPT=-O2
 
 FREERTOS_SRCS= \
 	external/FreeRTOS/list.c \

@@ -18,8 +18,6 @@ Archive member included to satisfy reference by file (symbol)
                               /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-__atexit.o) (__call_exitprocs)
 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libnosys.a(_exit.o)
                               /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-exit.o) (_exit)
-/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uqi.o)
-                              build/external/FreeRTOS/tasks.o (__gnu_thumb1_case_uqi)
 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
                               build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o (__aeabi_uidiv)
 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_divsi3.o)
@@ -165,70 +163,70 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/external/FreeRTOS/queue.o
  .data          0x0000000000000000        0x0 build/external/FreeRTOS/queue.o
  .bss           0x0000000000000000        0x0 build/external/FreeRTOS/queue.o
- .text.prvIsQueueEmpty
-                0x0000000000000000       0x14 build/external/FreeRTOS/queue.o
  .text.prvCopyDataToQueue
-                0x0000000000000000       0x76 build/external/FreeRTOS/queue.o
+                0x0000000000000000       0x78 build/external/FreeRTOS/queue.o
  .text.prvCopyDataFromQueue
                 0x0000000000000000       0x24 build/external/FreeRTOS/queue.o
  .text.prvUnlockQueue
-                0x0000000000000000       0x6a build/external/FreeRTOS/queue.o
+                0x0000000000000000       0x94 build/external/FreeRTOS/queue.o
+ .text.xQueueGenericReset.part.0
+                0x0000000000000000       0x64 build/external/FreeRTOS/queue.o
  .text.xQueueGenericReset
-                0x0000000000000000       0x68 build/external/FreeRTOS/queue.o
+                0x0000000000000000       0x10 build/external/FreeRTOS/queue.o
  .text.xQueueGenericCreateStatic
-                0x0000000000000000       0x5a build/external/FreeRTOS/queue.o
+                0x0000000000000000       0x68 build/external/FreeRTOS/queue.o
  .text.xQueueGetMutexHolder
-                0x0000000000000000       0x1a build/external/FreeRTOS/queue.o
+                0x0000000000000000       0x1c build/external/FreeRTOS/queue.o
  .text.xQueueGetMutexHolderFromISR
                 0x0000000000000000       0x14 build/external/FreeRTOS/queue.o
  .text.xQueueCreateCountingSemaphoreStatic
-                0x0000000000000000       0x2a build/external/FreeRTOS/queue.o
- .text.xQueueGenericSend
-                0x0000000000000000      0x120 build/external/FreeRTOS/queue.o
- .text.xQueueCreateMutexStatic
-                0x0000000000000000       0x28 build/external/FreeRTOS/queue.o
- .text.xQueueGiveMutexRecursive
                 0x0000000000000000       0x30 build/external/FreeRTOS/queue.o
+ .text.xQueueGenericSend
+                0x0000000000000000      0x13c build/external/FreeRTOS/queue.o
+ .text.xQueueCreateMutexStatic
+                0x0000000000000000       0x2c build/external/FreeRTOS/queue.o
+ .text.xQueueGiveMutexRecursive
+                0x0000000000000000       0x34 build/external/FreeRTOS/queue.o
  .text.xQueueGenericSendFromISR
-                0x0000000000000000       0x9c build/external/FreeRTOS/queue.o
+                0x0000000000000000       0xac build/external/FreeRTOS/queue.o
  .text.xQueueGiveFromISR
-                0x0000000000000000       0x82 build/external/FreeRTOS/queue.o
- .text.xQueueReceive
-                0x0000000000000000      0x10a build/external/FreeRTOS/queue.o
- .text.xQueueSemaphoreTake
-                0x0000000000000000      0x14c build/external/FreeRTOS/queue.o
- .text.xQueueTakeMutexRecursive
-                0x0000000000000000       0x36 build/external/FreeRTOS/queue.o
- .text.xQueuePeek
-                0x0000000000000000      0x10a build/external/FreeRTOS/queue.o
- .text.xQueueReceiveFromISR
                 0x0000000000000000       0x84 build/external/FreeRTOS/queue.o
+ .text.xQueueReceive
+                0x0000000000000000      0x134 build/external/FreeRTOS/queue.o
+ .text.xQueueSemaphoreTake
+                0x0000000000000000      0x178 build/external/FreeRTOS/queue.o
+ .text.xQueueTakeMutexRecursive
+                0x0000000000000000       0x38 build/external/FreeRTOS/queue.o
+ .text.xQueuePeek
+                0x0000000000000000      0x128 build/external/FreeRTOS/queue.o
+ .text.xQueueReceiveFromISR
+                0x0000000000000000       0x98 build/external/FreeRTOS/queue.o
  .text.xQueuePeekFromISR
-                0x0000000000000000       0x4a build/external/FreeRTOS/queue.o
+                0x0000000000000000       0x4c build/external/FreeRTOS/queue.o
  .text.uxQueueMessagesWaiting
                 0x0000000000000000       0x18 build/external/FreeRTOS/queue.o
  .text.uxQueueSpacesAvailable
                 0x0000000000000000       0x1c build/external/FreeRTOS/queue.o
  .text.uxQueueMessagesWaitingFromISR
                 0x0000000000000000        0xc build/external/FreeRTOS/queue.o
+ .text.vQueueDelete
+                0x0000000000000000       0x30 build/external/FreeRTOS/queue.o
  .text.uxQueueGetQueueNumber
                 0x0000000000000000        0x4 build/external/FreeRTOS/queue.o
  .text.vQueueSetQueueNumber
                 0x0000000000000000        0x4 build/external/FreeRTOS/queue.o
  .text.ucQueueGetQueueType
-                0x0000000000000000        0x6 build/external/FreeRTOS/queue.o
+                0x0000000000000000        0x8 build/external/FreeRTOS/queue.o
  .text.xQueueIsQueueEmptyFromISR
                 0x0000000000000000       0x10 build/external/FreeRTOS/queue.o
  .text.xQueueIsQueueFullFromISR
                 0x0000000000000000       0x14 build/external/FreeRTOS/queue.o
  .text.vQueueAddToRegistry
-                0x0000000000000000       0x24 build/external/FreeRTOS/queue.o
+                0x0000000000000000       0x28 build/external/FreeRTOS/queue.o
  .text.pcQueueGetName
                 0x0000000000000000       0x24 build/external/FreeRTOS/queue.o
  .text.vQueueUnregisterQueue
                 0x0000000000000000       0x28 build/external/FreeRTOS/queue.o
- .text.vQueueDelete
-                0x0000000000000000       0x10 build/external/FreeRTOS/queue.o
  .comment       0x0000000000000000       0x5a build/external/FreeRTOS/queue.o
  .ARM.attributes
                 0x0000000000000000       0x2c build/external/FreeRTOS/queue.o
@@ -237,21 +235,29 @@ Discarded input sections
  .data          0x0000000000000000        0x0 build/external/FreeRTOS/tasks.o
  .bss           0x0000000000000000        0x0 build/external/FreeRTOS/tasks.o
  .text.vTaskDelete
-                0x0000000000000000       0x94 build/external/FreeRTOS/tasks.o
+                0x0000000000000000       0xb4 build/external/FreeRTOS/tasks.o
+ .text.vTaskDelayUntil
+                0x0000000000000000       0x6c build/external/FreeRTOS/tasks.o
  .text.eTaskGetState
-                0x0000000000000000       0x70 build/external/FreeRTOS/tasks.o
+                0x0000000000000000       0x7c build/external/FreeRTOS/tasks.o
  .text.uxTaskPriorityGet
                 0x0000000000000000       0x20 build/external/FreeRTOS/tasks.o
  .text.uxTaskPriorityGetFromISR
                 0x0000000000000000       0x20 build/external/FreeRTOS/tasks.o
  .text.vTaskPrioritySet
-                0x0000000000000000       0xa0 build/external/FreeRTOS/tasks.o
+                0x0000000000000000       0xa8 build/external/FreeRTOS/tasks.o
+ .text.vTaskSuspend
+                0x0000000000000000       0xd0 build/external/FreeRTOS/tasks.o
  .text.vTaskResume
-                0x0000000000000000       0x74 build/external/FreeRTOS/tasks.o
+                0x0000000000000000       0x78 build/external/FreeRTOS/tasks.o
  .text.xTaskResumeFromISR
-                0x0000000000000000       0x84 build/external/FreeRTOS/tasks.o
+                0x0000000000000000       0x8c build/external/FreeRTOS/tasks.o
  .text.vTaskEndScheduler
                 0x0000000000000000       0x14 build/external/FreeRTOS/tasks.o
+ .text.vTaskSuspendAll
+                0x0000000000000000       0x10 build/external/FreeRTOS/tasks.o
+ .text.xTaskResumeAll
+                0x0000000000000000       0x18 build/external/FreeRTOS/tasks.o
  .text.xTaskGetTickCount
                 0x0000000000000000        0xc build/external/FreeRTOS/tasks.o
  .text.xTaskGetTickCountFromISR
@@ -260,18 +266,14 @@ Discarded input sections
                 0x0000000000000000        0xc build/external/FreeRTOS/tasks.o
  .text.pcTaskGetName
                 0x0000000000000000       0x18 build/external/FreeRTOS/tasks.o
- .text.vTaskDelayUntil
-                0x0000000000000000       0x60 build/external/FreeRTOS/tasks.o
  .text.xTaskCatchUpTicks
-                0x0000000000000000       0x2c build/external/FreeRTOS/tasks.o
- .text.vTaskSuspend
-                0x0000000000000000       0x9c build/external/FreeRTOS/tasks.o
+                0x0000000000000000       0x34 build/external/FreeRTOS/tasks.o
  .text.vTaskPlaceOnEventList
                 0x0000000000000000       0x24 build/external/FreeRTOS/tasks.o
  .text.vTaskPlaceOnUnorderedEventList
                 0x0000000000000000       0x40 build/external/FreeRTOS/tasks.o
  .text.xTaskRemoveFromEventList
-                0x0000000000000000       0x78 build/external/FreeRTOS/tasks.o
+                0x0000000000000000       0x80 build/external/FreeRTOS/tasks.o
  .text.vTaskRemoveFromUnorderedEventList
                 0x0000000000000000       0x70 build/external/FreeRTOS/tasks.o
  .text.vTaskSetTimeOutState
@@ -279,49 +281,53 @@ Discarded input sections
  .text.vTaskInternalSetTimeOutState
                 0x0000000000000000       0x18 build/external/FreeRTOS/tasks.o
  .text.xTaskCheckForTimeOut
-                0x0000000000000000       0x64 build/external/FreeRTOS/tasks.o
+                0x0000000000000000       0x6c build/external/FreeRTOS/tasks.o
  .text.vTaskMissedYield
                 0x0000000000000000        0xc build/external/FreeRTOS/tasks.o
  .text.uxTaskGetTaskNumber
-                0x0000000000000000        0x8 build/external/FreeRTOS/tasks.o
+                0x0000000000000000        0xc build/external/FreeRTOS/tasks.o
  .text.vTaskSetTaskNumber
                 0x0000000000000000        0x8 build/external/FreeRTOS/tasks.o
  .text.vTaskGetInfo
-                0x0000000000000000       0x80 build/external/FreeRTOS/tasks.o
- .text.prvListTasksWithinSingleList
-                0x0000000000000000       0x5c build/external/FreeRTOS/tasks.o
+                0x0000000000000000       0xa8 build/external/FreeRTOS/tasks.o
+ .text.prvListTasksWithinSingleList.part.0
+                0x0000000000000000       0x60 build/external/FreeRTOS/tasks.o
  .text.uxTaskGetSystemState
-                0x0000000000000000       0xa4 build/external/FreeRTOS/tasks.o
+                0x0000000000000000      0x104 build/external/FreeRTOS/tasks.o
  .text.uxTaskGetStackHighWaterMark
-                0x0000000000000000       0x20 build/external/FreeRTOS/tasks.o
+                0x0000000000000000       0x28 build/external/FreeRTOS/tasks.o
  .text.xTaskGetCurrentTaskHandle
                 0x0000000000000000        0xc build/external/FreeRTOS/tasks.o
  .text.xTaskGetSchedulerState
                 0x0000000000000000       0x20 build/external/FreeRTOS/tasks.o
  .text.xTaskPriorityInherit
-                0x0000000000000000       0x7c build/external/FreeRTOS/tasks.o
+                0x0000000000000000       0x84 build/external/FreeRTOS/tasks.o
  .text.xTaskPriorityDisinherit
                 0x0000000000000000       0x6c build/external/FreeRTOS/tasks.o
  .text.vTaskPriorityDisinheritAfterTimeout
-                0x0000000000000000       0x78 build/external/FreeRTOS/tasks.o
+                0x0000000000000000       0x7c build/external/FreeRTOS/tasks.o
  .text.uxTaskResetEventItemValue
                 0x0000000000000000       0x18 build/external/FreeRTOS/tasks.o
  .text.pvTaskIncrementMutexHeldCount
                 0x0000000000000000       0x18 build/external/FreeRTOS/tasks.o
  .text.ulTaskGenericNotifyTake
-                0x0000000000000000       0x64 build/external/FreeRTOS/tasks.o
+                0x0000000000000000       0x68 build/external/FreeRTOS/tasks.o
  .text.xTaskGenericNotifyWait
                 0x0000000000000000       0x7c build/external/FreeRTOS/tasks.o
  .text.xTaskGenericNotify
-                0x0000000000000000       0xc0 build/external/FreeRTOS/tasks.o
+                0x0000000000000000       0xc8 build/external/FreeRTOS/tasks.o
+ .rodata.xTaskGenericNotify
+                0x0000000000000000       0x14 build/external/FreeRTOS/tasks.o
  .text.xTaskGenericNotifyFromISR
-                0x0000000000000000       0xf0 build/external/FreeRTOS/tasks.o
+                0x0000000000000000       0xf8 build/external/FreeRTOS/tasks.o
+ .rodata.xTaskGenericNotifyFromISR
+                0x0000000000000000       0x14 build/external/FreeRTOS/tasks.o
  .text.vTaskGenericNotifyGiveFromISR
-                0x0000000000000000       0xa4 build/external/FreeRTOS/tasks.o
+                0x0000000000000000       0xac build/external/FreeRTOS/tasks.o
  .text.xTaskGenericNotifyStateClear
-                0x0000000000000000       0x34 build/external/FreeRTOS/tasks.o
+                0x0000000000000000       0x44 build/external/FreeRTOS/tasks.o
  .text.ulTaskGenericNotifyValueClear
-                0x0000000000000000       0x2c build/external/FreeRTOS/tasks.o
+                0x0000000000000000       0x30 build/external/FreeRTOS/tasks.o
  .text          0x0000000000000000        0x0 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
  .data          0x0000000000000000        0x0 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
  .bss           0x0000000000000000        0x0 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
@@ -333,21 +339,21 @@ Discarded input sections
  .text.LL_RCC_DeInit
                 0x0000000000000000       0xc0 build/external/STM32CubeF0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.o
  .text.LL_RCC_GetCECClockFreq
-                0x0000000000000000       0x30 build/external/STM32CubeF0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.o
+                0x0000000000000000       0x34 build/external/STM32CubeF0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.o
+ .text.RCC_GetSystemClockFreq
+                0x0000000000000000       0x68 build/external/STM32CubeF0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.o
+ .text.LL_RCC_GetSystemClocksFreq
+                0x0000000000000000       0x38 build/external/STM32CubeF0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.o
+ .text.LL_RCC_GetUSARTClockFreq
+                0x0000000000000000       0xb4 build/external/STM32CubeF0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.o
+ .text.LL_RCC_GetI2CClockFreq
+                0x0000000000000000       0x34 build/external/STM32CubeF0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.o
  .text.RCC_GetHCLKClockFreq
                 0x0000000000000000       0x18 build/external/STM32CubeF0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.o
  .text.RCC_GetPCLK1ClockFreq
                 0x0000000000000000       0x18 build/external/STM32CubeF0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.o
  .text.RCC_PLL_GetFreqDomain_SYS
-                0x0000000000000000       0x48 build/external/STM32CubeF0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.o
- .text.RCC_GetSystemClockFreq
-                0x0000000000000000       0x34 build/external/STM32CubeF0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.o
- .text.LL_RCC_GetSystemClocksFreq
-                0x0000000000000000       0x18 build/external/STM32CubeF0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.o
- .text.LL_RCC_GetUSARTClockFreq
-                0x0000000000000000       0x94 build/external/STM32CubeF0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.o
- .text.LL_RCC_GetI2CClockFreq
-                0x0000000000000000       0x30 build/external/STM32CubeF0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.o
+                0x0000000000000000       0x4c build/external/STM32CubeF0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.o
  .comment       0x0000000000000000       0x5a build/external/STM32CubeF0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.o
  .ARM.attributes
                 0x0000000000000000       0x2c build/external/STM32CubeF0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.o
@@ -355,26 +361,17 @@ Discarded input sections
  .data          0x0000000000000000        0x0 build/external/STM32CubeF0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_gpio.o
  .bss           0x0000000000000000        0x0 build/external/STM32CubeF0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_gpio.o
  .text.LL_GPIO_DeInit
-                0x0000000000000000       0xcc build/external/STM32CubeF0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_gpio.o
+                0x0000000000000000       0xec build/external/STM32CubeF0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_gpio.o
  .text.LL_GPIO_StructInit
                 0x0000000000000000       0x18 build/external/STM32CubeF0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_gpio.o
  .text          0x0000000000000000        0x0 build/src/main.o
  .data          0x0000000000000000        0x0 build/src/main.o
  .bss           0x0000000000000000        0x0 build/src/main.o
  .text.usart1_init
-                0x0000000000000000        0x2 build/src/main.o
+                0x0000000000000000        0x4 build/src/main.o
+ .text.test_task2
+                0x0000000000000000       0x2c build/src/main.o
  COMMON         0x0000000000000000       0x2c build/src/main.o
- .text          0x0000000000000000       0x14 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uqi.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uqi.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uqi.o)
- .debug_line    0x0000000000000000       0x68 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uqi.o)
- .debug_info    0x0000000000000000       0x26 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uqi.o)
- .debug_abbrev  0x0000000000000000       0x14 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uqi.o)
- .debug_aranges
-                0x0000000000000000       0x20 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uqi.o)
- .debug_str     0x0000000000000000       0xa3 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uqi.o)
- .ARM.attributes
-                0x0000000000000000       0x1e /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uqi.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
  .text          0x0000000000000000      0x1d4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_divsi3.o)
@@ -457,7 +454,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
                 0x0000000008000000                g_pfnVectors
                 0x00000000080000c0                . = ALIGN (0x4)
 
-.text           0x00000000080000c0      0xcec
+.text           0x00000000080000c0      0xed8
                 0x00000000080000c0                . = ALIGN (0x4)
  *(.text)
  .text          0x00000000080000c0       0x98 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
@@ -512,180 +509,182 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
                 0x00000000080003ac                FLASH_IRQHandler
                 0x00000000080003ac                USART1_IRQHandler
                 0x00000000080003ac                TIM1_BRK_UP_TRG_COM_IRQHandler
+ *fill*         0x00000000080003ae        0x2 
  .text.vListInitialise
-                0x00000000080003ae       0x16 build/external/FreeRTOS/list.o
-                0x00000000080003ae                vListInitialise
+                0x00000000080003b0       0x18 build/external/FreeRTOS/list.o
+                0x00000000080003b0                vListInitialise
  .text.vListInitialiseItem
-                0x00000000080003c4        0x6 build/external/FreeRTOS/list.o
-                0x00000000080003c4                vListInitialiseItem
+                0x00000000080003c8        0x8 build/external/FreeRTOS/list.o
+                0x00000000080003c8                vListInitialiseItem
  .text.vListInsertEnd
-                0x00000000080003ca       0x18 build/external/FreeRTOS/list.o
-                0x00000000080003ca                vListInsertEnd
+                0x00000000080003d0       0x18 build/external/FreeRTOS/list.o
+                0x00000000080003d0                vListInsertEnd
  .text.vListInsert
-                0x00000000080003e2       0x2e build/external/FreeRTOS/list.o
-                0x00000000080003e2                vListInsert
+                0x00000000080003e8       0x30 build/external/FreeRTOS/list.o
+                0x00000000080003e8                vListInsert
  .text.uxListRemove
-                0x0000000008000410       0x20 build/external/FreeRTOS/list.o
-                0x0000000008000410                uxListRemove
+                0x0000000008000418       0x24 build/external/FreeRTOS/list.o
+                0x0000000008000418                uxListRemove
+ .text.prvAddNewTaskToReadyList
+                0x000000000800043c      0x10c build/external/FreeRTOS/tasks.o
  .text.prvIdleTask
-                0x0000000008000430       0x4c build/external/FreeRTOS/tasks.o
- .text.prvResetNextTaskUnblockTime
-                0x000000000800047c       0x24 build/external/FreeRTOS/tasks.o
+                0x0000000008000548       0x4c build/external/FreeRTOS/tasks.o
+ .text.prvResetNextTaskUnblockTime.part.0
+                0x0000000008000594       0x18 build/external/FreeRTOS/tasks.o
+ .text.prvInitialiseNewTask.isra.0
+                0x00000000080005ac       0xa4 build/external/FreeRTOS/tasks.o
  .text.prvAddCurrentTaskToDelayedList
-                0x00000000080004a0       0x70 build/external/FreeRTOS/tasks.o
+                0x0000000008000650       0x70 build/external/FreeRTOS/tasks.o
+ .text.xTaskIncrementTick.part.0
+                0x00000000080006c0      0x140 build/external/FreeRTOS/tasks.o
+ .text.xTaskResumeAll.part.0
+                0x0000000008000800      0x124 build/external/FreeRTOS/tasks.o
+ .text.vTaskSwitchContext.part.0
+                0x0000000008000924       0x5c build/external/FreeRTOS/tasks.o
  .text.xTaskCreateStatic
-                0x0000000008000510      0x1a0 build/external/FreeRTOS/tasks.o
-                0x0000000008000510                xTaskCreateStatic
- .text.vTaskStartScheduler
-                0x00000000080006b0       0x60 build/external/FreeRTOS/tasks.o
-                0x00000000080006b0                vTaskStartScheduler
- .text.vTaskSuspendAll
-                0x0000000008000710       0x10 build/external/FreeRTOS/tasks.o
-                0x0000000008000710                vTaskSuspendAll
- .text.xTaskIncrementTick
-                0x0000000008000720      0x100 build/external/FreeRTOS/tasks.o
-                0x0000000008000720                xTaskIncrementTick
- .text.xTaskResumeAll
-                0x0000000008000820       0xd0 build/external/FreeRTOS/tasks.o
-                0x0000000008000820                xTaskResumeAll
+                0x0000000008000980       0x44 build/external/FreeRTOS/tasks.o
+                0x0000000008000980                xTaskCreateStatic
  .text.vTaskDelay
-                0x00000000080008f0       0x34 build/external/FreeRTOS/tasks.o
-                0x00000000080008f0                vTaskDelay
+                0x00000000080009c4       0x3c build/external/FreeRTOS/tasks.o
+                0x00000000080009c4                vTaskDelay
+ .text.vTaskStartScheduler
+                0x0000000008000a00       0x8c build/external/FreeRTOS/tasks.o
+                0x0000000008000a00                vTaskStartScheduler
+ .text.xTaskIncrementTick
+                0x0000000008000a8c       0x24 build/external/FreeRTOS/tasks.o
+                0x0000000008000a8c                xTaskIncrementTick
  .text.vTaskSwitchContext
-                0x0000000008000924       0x6c build/external/FreeRTOS/tasks.o
-                0x0000000008000924                vTaskSwitchContext
+                0x0000000008000ab0       0x20 build/external/FreeRTOS/tasks.o
+                0x0000000008000ab0                vTaskSwitchContext
  .text.prvTaskExitError
-                0x0000000008000990       0x24 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
- *fill*         0x00000000080009b4        0xc 
+                0x0000000008000ad0       0x24 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
+ *fill*         0x0000000008000af4        0xc 
  .text.vPortStartFirstTask
-                0x00000000080009c0       0x34 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
+                0x0000000008000b00       0x34 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
  .text.pxPortInitialiseStack
-                0x00000000080009f4       0x20 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
-                0x00000000080009f4                pxPortInitialiseStack
+                0x0000000008000b34       0x20 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
+                0x0000000008000b34                pxPortInitialiseStack
  .text.SVC_Handler
-                0x0000000008000a14        0x2 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
-                0x0000000008000a14                SVC_Handler
- *fill*         0x0000000008000a16        0x2 
+                0x0000000008000b54        0x4 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
+                0x0000000008000b54                SVC_Handler
  .text.vPortYield
-                0x0000000008000a18       0x18 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
-                0x0000000008000a18                vPortYield
+                0x0000000008000b58       0x18 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
+                0x0000000008000b58                vPortYield
  .text.vPortEnterCritical
-                0x0000000008000a30       0x18 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
-                0x0000000008000a30                vPortEnterCritical
+                0x0000000008000b70       0x18 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
+                0x0000000008000b70                vPortEnterCritical
  .text.vPortExitCritical
-                0x0000000008000a48       0x1c build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
-                0x0000000008000a48                vPortExitCritical
+                0x0000000008000b88       0x1c build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
+                0x0000000008000b88                vPortExitCritical
  .text.ulSetInterruptMaskFromISR
-                0x0000000008000a64        0x8 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
-                0x0000000008000a64                ulSetInterruptMaskFromISR
+                0x0000000008000ba4        0x8 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
+                0x0000000008000ba4                ulSetInterruptMaskFromISR
  .text.vClearInterruptMaskFromISR
-                0x0000000008000a6c        0x6 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
-                0x0000000008000a6c                vClearInterruptMaskFromISR
- *fill*         0x0000000008000a72        0xe 
+                0x0000000008000bac        0x8 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
+                0x0000000008000bac                vClearInterruptMaskFromISR
+ *fill*         0x0000000008000bb4        0xc 
  .text.PendSV_Handler
-                0x0000000008000a80       0x44 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
-                0x0000000008000a80                PendSV_Handler
+                0x0000000008000bc0       0x44 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
+                0x0000000008000bc0                PendSV_Handler
  .text.SysTick_Handler
-                0x0000000008000ac4       0x24 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
-                0x0000000008000ac4                SysTick_Handler
+                0x0000000008000c04       0x24 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
+                0x0000000008000c04                SysTick_Handler
  .text.vPortSetupTimerInterrupt
-                0x0000000008000ae8       0x34 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
-                0x0000000008000ae8                vPortSetupTimerInterrupt
+                0x0000000008000c28       0x34 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
+                0x0000000008000c28                vPortSetupTimerInterrupt
  .text.xPortStartScheduler
-                0x0000000008000b1c       0x3c build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
-                0x0000000008000b1c                xPortStartScheduler
+                0x0000000008000c5c       0x50 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
+                0x0000000008000c5c                xPortStartScheduler
  .text.LL_GPIO_Init
-                0x0000000008000b58       0xa2 build/external/STM32CubeF0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_gpio.o
-                0x0000000008000b58                LL_GPIO_Init
- *fill*         0x0000000008000bfa        0x2 
+                0x0000000008000cac       0xec build/external/STM32CubeF0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_gpio.o
+                0x0000000008000cac                LL_GPIO_Init
  .text.test_task
-                0x0000000008000bfc       0x18 build/src/main.o
-                0x0000000008000bfc                test_task
+                0x0000000008000d98       0x2c build/src/main.o
+                0x0000000008000d98                test_task
  .text.SystemInit
-                0x0000000008000c14        0x2 build/src/main.o
-                0x0000000008000c14                SystemInit
- *fill*         0x0000000008000c16        0x2 
+                0x0000000008000dc4        0x4 build/src/main.o
+                0x0000000008000dc4                SystemInit
  .text.rcc_init
-                0x0000000008000c18       0xc8 build/src/main.o
-                0x0000000008000c18                rcc_init
+                0x0000000008000dc8       0xd4 build/src/main.o
+                0x0000000008000dc8                rcc_init
  .text.gpio_init
-                0x0000000008000ce0       0x4c build/src/main.o
-                0x0000000008000ce0                gpio_init
+                0x0000000008000e9c       0x4c build/src/main.o
+                0x0000000008000e9c                gpio_init
  .text.startup.main
-                0x0000000008000d2c       0x50 build/src/main.o
-                0x0000000008000d2c                main
+                0x0000000008000ee8       0x80 build/src/main.o
+                0x0000000008000ee8                main
  .text.vApplicationGetIdleTaskMemory
-                0x0000000008000d7c       0x18 build/src/main.o
-                0x0000000008000d7c                vApplicationGetIdleTaskMemory
+                0x0000000008000f68       0x18 build/src/main.o
+                0x0000000008000f68                vApplicationGetIdleTaskMemory
  *(.glue_7)
- .glue_7        0x0000000008000d94        0x0 linker stubs
+ .glue_7        0x0000000008000f80        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000000008000d94        0x0 linker stubs
+ .glue_7t       0x0000000008000f80        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0000000008000d94        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+ .eh_frame      0x0000000008000f80        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
  *(.init)
- .init          0x0000000008000d94        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crti.o
-                0x0000000008000d94                _init
- .init          0x0000000008000d98        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
+ .init          0x0000000008000f80        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crti.o
+                0x0000000008000f80                _init
+ .init          0x0000000008000f84        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
  *(.fini)
- .fini          0x0000000008000da0        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crti.o
-                0x0000000008000da0                _fini
- .fini          0x0000000008000da4        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
-                0x0000000008000dac                . = ALIGN (0x4)
-                0x0000000008000dac                _etext = .
+ .fini          0x0000000008000f8c        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crti.o
+                0x0000000008000f8c                _fini
+ .fini          0x0000000008000f90        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
+                0x0000000008000f98                . = ALIGN (0x4)
+                0x0000000008000f98                _etext = .
 
-.vfp11_veneer   0x0000000008000dac        0x0
- .vfp11_veneer  0x0000000008000dac        0x0 linker stubs
+.vfp11_veneer   0x0000000008000f98        0x0
+ .vfp11_veneer  0x0000000008000f98        0x0 linker stubs
 
-.v4_bx          0x0000000008000dac        0x0
- .v4_bx         0x0000000008000dac        0x0 linker stubs
+.v4_bx          0x0000000008000f98        0x0
+ .v4_bx         0x0000000008000f98        0x0 linker stubs
 
-.iplt           0x0000000008000dac        0x0
- .iplt          0x0000000008000dac        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x0000000008000f98        0x0
+ .iplt          0x0000000008000f98        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x0000000008000dac       0x10
-                0x0000000008000dac                . = ALIGN (0x4)
+.rodata         0x0000000008000f98        0xc
+                0x0000000008000f98                . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
- .rodata.vTaskStartScheduler.str1.1
-                0x0000000008000dac        0x5 build/external/FreeRTOS/tasks.o
- .rodata.main.str1.1
-                0x0000000008000db1        0xa build/src/main.o
-                0x0000000008000dbc                . = ALIGN (0x4)
- *fill*         0x0000000008000dbb        0x1 
+ .rodata.vTaskStartScheduler.str1.4
+                0x0000000008000f98        0x5 build/external/FreeRTOS/tasks.o
+ *fill*         0x0000000008000f9d        0x3 
+ .rodata.main.str1.4
+                0x0000000008000fa0        0x4 build/src/main.o
+                0x0000000008000fa4                . = ALIGN (0x4)
 
-.rel.dyn        0x0000000008000dbc        0x0
- .rel.iplt      0x0000000008000dbc        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x0000000008000fa4        0x0
+ .rel.iplt      0x0000000008000fa4        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x0000000008000dbc        0x0
-                0x0000000008000dbc                __exidx_start = .
+.ARM            0x0000000008000fa4        0x0
+                0x0000000008000fa4                __exidx_start = .
  *(.ARM.exidx*)
-                0x0000000008000dbc                __exidx_end = .
+                0x0000000008000fa4                __exidx_end = .
 
-.preinit_array  0x0000000008000dbc        0x0
-                0x0000000008000dbc                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0000000008000fa4        0x0
+                0x0000000008000fa4                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x0000000008000dbc                PROVIDE (__preinit_array_end = .)
+                0x0000000008000fa4                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x0000000008000dbc        0x4
-                0x0000000008000dbc                PROVIDE (__init_array_start = .)
+.init_array     0x0000000008000fa4        0x4
+                0x0000000008000fa4                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x0000000008000dbc        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x0000000008000dc0                PROVIDE (__init_array_end = .)
+ .init_array    0x0000000008000fa4        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000008000fa8                PROVIDE (__init_array_end = .)
 
-.fini_array     0x0000000008000dc0        0x4
-                0x0000000008000dc0                PROVIDE (__fini_array_start = .)
+.fini_array     0x0000000008000fa8        0x4
+                0x0000000008000fa8                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0000000008000dc0        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x0000000008000dc4                PROVIDE (__fini_array_end = .)
-                0x0000000008000dc4                _sidata = LOADADDR (.data)
+ .fini_array    0x0000000008000fa8        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000008000fac                PROVIDE (__fini_array_end = .)
+                0x0000000008000fac                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000        0x8 load address 0x0000000008000dc4
+.data           0x0000000020000000        0x8 load address 0x0000000008000fac
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -699,17 +698,17 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
                 0x0000000020000008                _edata = .
 
 .tm_clone_table
-                0x0000000020000008        0x0 load address 0x0000000008000dcc
+                0x0000000020000008        0x0 load address 0x0000000008000fb4
  .tm_clone_table
                 0x0000000020000008        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
  .tm_clone_table
                 0x0000000020000008        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtend.o
 
-.igot.plt       0x0000000020000008        0x0 load address 0x0000000008000dcc
+.igot.plt       0x0000000020000008        0x0 load address 0x0000000008000fb4
  .igot.plt      0x0000000020000008        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
                 0x0000000020000008                . = ALIGN (0x4)
 
-.bss            0x0000000020000008      0x9d0 load address 0x0000000008000dcc
+.bss            0x0000000020000008      0x774 load address 0x0000000008000fb4
                 0x0000000020000008                _sbss = .
                 0x0000000020000008                __bss_start__ = _sbss
  *(.bss)
@@ -756,29 +755,26 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
                 0x0000000020000518        0x4 build/external/FreeRTOS/tasks.o
  .bss.xYieldPending
                 0x000000002000051c        0x4 build/external/FreeRTOS/tasks.o
- .bss.test_task_buffer.5645
-                0x0000000020000520       0x5c build/src/main.o
- .bss.test_task_stack.5644
-                0x000000002000057c      0x200 build/src/main.o
- .bss.uxIdleTaskStack.5659
-                0x000000002000077c      0x200 build/src/main.o
- .bss.xIdleTaskTCB.5658
-                0x000000002000097c       0x5c build/src/main.o
+ .bss.uxIdleTaskStack.5663
+                0x0000000020000520      0x200 build/src/main.o
+ .bss.xIdleTaskTCB.5662
+                0x0000000020000720       0x5c build/src/main.o
  *(COMMON)
-                0x00000000200009d8                . = ALIGN (0x4)
-                0x00000000200009d8                _ebss = .
-                0x00000000200009d8                __bss_end__ = _ebss
+                0x000000002000077c                . = ALIGN (0x4)
+                0x000000002000077c                _ebss = .
+                0x000000002000077c                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x00000000200009d8      0x600 load address 0x0000000008000dcc
-                0x00000000200009d8                . = ALIGN (0x8)
+                0x000000002000077c      0x604 load address 0x0000000008000fb4
+                0x0000000020000780                . = ALIGN (0x8)
+ *fill*         0x000000002000077c        0x4 
                 [!provide]                        PROVIDE (end = .)
                 [!provide]                        PROVIDE (_end = .)
-                0x0000000020000bd8                . = (. + _Min_Heap_Size)
- *fill*         0x00000000200009d8      0x200 
-                0x0000000020000fd8                . = (. + _Min_Stack_Size)
- *fill*         0x0000000020000bd8      0x400 
-                0x0000000020000fd8                . = ALIGN (0x8)
+                0x0000000020000980                . = (. + _Min_Heap_Size)
+ *fill*         0x0000000020000780      0x200 
+                0x0000000020000d80                . = (. + _Min_Stack_Size)
+ *fill*         0x0000000020000980      0x400 
+                0x0000000020000d80                . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)
@@ -969,8 +965,6 @@ __divsi3                                          /usr/lib/gcc/arm-none-eabi/9.2
 __dso_handle                                      /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
 __fini_array_end                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-fini.o)
 __fini_array_start                                /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-fini.o)
-__gnu_thumb1_case_uqi                             /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uqi.o)
-                                                  build/external/FreeRTOS/tasks.o
 __init_array_end                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-init.o)
 __init_array_start                                /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-init.o)
 __libc_fini_array                                 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-fini.o)
@@ -1039,6 +1033,7 @@ pxPortInitialiseStack                             build/external/FreeRTOS/portab
 rcc_init                                          build/src/main.o
 software_init_hook                                /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
 test_task                                         build/src/main.o
+test_task2                                        build/src/main.o
 ucQueueGetQueueType                               build/external/FreeRTOS/queue.o
 ulSetInterruptMaskFromISR                         build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
                                                   build/external/FreeRTOS/tasks.o
@@ -1076,9 +1071,11 @@ vListInsertEnd                                    build/external/FreeRTOS/list.o
 vPortEndScheduler                                 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
                                                   build/external/FreeRTOS/tasks.o
 vPortEnterCritical                                build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
+                                                  build/src/main.o
                                                   build/external/FreeRTOS/tasks.o
                                                   build/external/FreeRTOS/queue.o
 vPortExitCritical                                 build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
+                                                  build/src/main.o
                                                   build/external/FreeRTOS/tasks.o
                                                   build/external/FreeRTOS/queue.o
 vPortSetupTimerInterrupt                          build/external/FreeRTOS/portable/GCC/ARM_CM0/port.o
