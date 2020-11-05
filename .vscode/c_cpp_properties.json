@@ -3,7 +3,12 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/external/FreeRTOS/include",
+                "${workspaceFolder}/external/FreeRTOS/portable/GCC/ARM_CM0/",
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/external/STM32CubeF0/Drivers/CMSIS/Include",
+                "${workspaceFolder}/external/STM32CubeF0/Drivers/CMSIS/Device/ST/STM32F0xx/Include",
+                "${workspaceFolder}/external/STM32CubeF0/Drivers/STM32F0xx_HAL_Driver/Inc"
             ],
             "defines": [
                 "STM32F071xB",
