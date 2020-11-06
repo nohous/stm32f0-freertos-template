@@ -126,6 +126,9 @@ git checkout 5.7.0
 ```
 Files are located in external/CMSIS_5.
 
+## TODO
+Add external/ things as git submodules. Maybe.
+
 ## What to Be Careful About
 
 Notes:
